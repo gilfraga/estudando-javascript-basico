@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF / ELSE</title>
+</head>
+<body>
+    <script>
+        var notaA = Number(prompt("Insira a primeira nota"));
+        var notaB = Number(prompt("Insira a segunda nota"));
+        var notaC = Number(prompt("Insira a terceira nota"));
+        var notaD = Number(prompt("Insira a quarta nota"));
+        var faltas = Number(prompt("Insira as suas faltas"));
+        var media = (notaA + notaA + notaC + notaD) / 4;
+        var situacao;
+
+        if (media >= 6 && faltas < 200) {
+            situacao = "aprovado";
+        } else {
+            situacao = "reprovado";
+        }
+
+        document.write("A sua média é " +  media + " e você foi " + situacao + "!");
+
+    </script>
+</body>
+</html>

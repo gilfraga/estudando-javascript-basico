@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- Conjunto de objetos dentro do navegador que podem dar acesso aos componentes internos do seu site. -->
+
+    <p>Teste DOM</p>
+    <p>Teste DOM</p>
+    <p>Teste DOM</p>
+
+    <div id="d1"></div>
+    <button onclick="mudar()" class="b2">Mudar</button>
+
+    <script>
+        function mudar() {
+            let paragrafo = document.getElementsByTagName('p')[1]
+            paragrafo.innerHTML = 'O texto mudou'
+            paragrafo.style.color = 'red'   
+            
+            let divi = document.getElementById('d1')
+            divi.style.height = '200px'
+            divi.style.width = '200px'
+            divi.style.marginBottom = '10px'
+            divi.style.backgroundColor = 'blue'
+        }
+        
+
+
+    </script>
+</body>
+</html>

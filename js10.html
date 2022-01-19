@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS DO MOUSE</title>
+</head>
+<body>
+    <button onclick="alert(meupeso(99, 1.88))">Clique simples</button>
+
+    <button ondblclick="alert(meupeso(99, 1.88))">Clique duplo</button>
+
+    <button onmousedown="alert(meupeso(99, 1.88))">Pressione o botão</button>
+
+    <button onmouseover="alert(meupeso(99, 1.88))">Passe em cima</button>
+
+    <button onmouseout="alert(meupeso(99, 1.88))">Saindo do botão</button>
+
+    <!--Eventos de mouse foram inseridos em botões a título de exemplo, mas poderiam ter sido inseridos em imagens, div, ou outros elementos-->
+
+    <script>
+        // EVENTOS DE MOUSE
+
+        function meupeso(peso, altura) {
+            let imc = peso / (altura * altura);
+
+            if (imc < 18.5) {
+                return "MAGREZA"                
+            } 
+            else if (imc >= 18.5 && imc <24.9) {
+                return "NORMAL" 
+            }
+            else if (imc >= 25.0 && imc <29.9) {
+                return "SOBREPESO" 
+            }
+            else if (imc >= 30.0 && imc <29.9) {
+                return "OBESIDADE" 
+            }
+            else if (imc >= 40.0) {
+                return "OBESIDADE MÓRBIDA" 
+            }   
+        }
+
+
+    </script>
+</body>
+</html>

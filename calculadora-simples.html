@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <div id="calc">
+        <h1>Calculadora Simples</h1>
+
+        <input type="number" id="num1">
+
+        <select name="" id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <input type="number" id="num2">
+
+        <button onclick="calculadora()">Calcular</button>
+
+        <div id="result">Resultado</div>
+        
+    </div>
+
+    <script>
+        
+        function calculadora() {
+            let num1 = document.getElementById('num1')
+            let n1 = Number(num1.value)
+
+            let num2 = document.getElementById('num2')
+            let n2 = Number(num2.value)
+
+            let op = document.getElementById('op').value
+
+            let result = document.getElementById('result')
+
+            if (op == '+') {
+                result.innerHTML = n1 + n2   
+            } 
+            else if (op == '-') {
+                result.innerHTML = n1 - n2    
+            } 
+            else if (op == '*') {
+                result.innerHTML = n1 * n2    
+            } 
+            else if (op == '/') {
+                result.innerHTML = n1 / n2    
+            }             
+        }
+        
+    </script>
+    
+</body>
+</html>
